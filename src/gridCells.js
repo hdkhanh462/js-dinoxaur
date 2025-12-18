@@ -3,8 +3,12 @@ export const gridCells = (n) => {
 };
 
 export const isSpaceFree = (walls, x, y) => {
-  const str = `${x},${y}`;
-  const isWallPresent = walls.has(str);
+  if (!walls || typeof x !== "number" || typeof y !== "number") {
+    throw new Error(
+      "Invalid input: walls must be a Set, x and y must be numbers"
+    );
+  }
 
-  return !isWallPresent;
+  const str = `${x},${y}`;
+  return !walls.has(str);
 };

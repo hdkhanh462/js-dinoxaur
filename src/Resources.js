@@ -1,3 +1,4 @@
+// Cleaned up commented-out code and added comments for clarity.
 export default class Resources {
   constructor(toLoadImage, toLoadSound) {
     this.toLoadImage = toLoadImage;
@@ -5,6 +6,7 @@ export default class Resources {
     this.images = {};
     this.sounds = {};
 
+    // Load images
     Object.keys(this.toLoadImage).forEach((key) => {
       const img = new Image();
       img.src = this.toLoadImage[key];
@@ -18,18 +20,14 @@ export default class Resources {
       };
     });
 
+    // Load sounds
     Object.keys(this.toLoadSound).forEach((key) => {
       const sound = new Audio();
       sound.src = this.toLoadSound[key];
       sound.preload = "auto";
       this.sounds[key] = {
         sound: sound,
-        // isLoaded: false,
       };
-
-      // sound.onload = () => {
-      //   this.sounds[key].isLoaded = true;
-      // };
     });
   }
 }

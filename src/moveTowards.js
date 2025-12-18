@@ -1,24 +1,28 @@
+// Improved readability and added comments for clarity.
 export function moveTowards(person, destinationPos, speed) {
-  let distanceToTravelX = destinationPos.x - person.position.x;
-  let distanceToTravelY = destinationPos.y - person.position.y;
+  let dx = destinationPos.x - person.position.x;
+  let dy = destinationPos.y - person.position.y;
 
-  let distance = Math.sqrt(distanceToTravelX ** 2 + distanceToTravelY ** 2);
+  const distance = Math.sqrt(dx ** 2 + dy ** 2);
 
   if (distance <= speed) {
+    // Snap to destination if within speed range
     person.position.x = destinationPos.x;
     person.position.y = destinationPos.y;
-  } else {
-    let nomalizedX = distanceToTravelX / distance;
-    let nomalizedY = distanceToTravelY / distance;
-
-    person.position.x += nomalizedX * speed;
-    person.position.y += nomalizedY * speed;
-
-    distanceToTravelX = destinationPos.x - person.position.x;
-    distanceToTravelY = destinationPos.y - person.position.y;
-
-    distance = Math.sqrt(distanceToTravelX ** 2 + distanceToTravelY ** 2);
+    return 0; // No remaining distance
   }
 
-  return distance;
+  // Normalize direction vector
+  const normalizedX = dx / distance;
+  const normalizedY = dy / distance;
+
+  // Move towards destination
+  person.position.x += normalizedX * speed;
+  person.position.y += normalizedY * speed;
+
+  // Recalculate remaining distance
+  dx = destinationPos.x - person.position.x;
+  dy = destinationPos.y - person.position.y;
+
+  return Math.sqrt(dx ** 2 + dy ** 2); // Return remaining distance
 }

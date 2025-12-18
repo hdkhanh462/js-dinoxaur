@@ -1,4 +1,4 @@
-import { gridCells } from "../src/gridCells.js";
+import { gridCells } from "../gridCells.js";
 import Imput from "./Imput.js";
 
 let isJumpPressed = false;

@@ -1,6 +1,5 @@
-import VectorTo from "../src/VectorTo.js";
-import { gridCells } from "../src/gridCells.js";
-import { moveTowards } from "../src/moveTowards.js";
+import VectorTo from "../VectorTo.js";
+import { gridCells } from "../gridCells.js";
 
 let isGameOver = false;
 let ENEMY_NEXT_INTERVAL = 1000;

@@ -1,11 +1,11 @@
-import Animations from "../src/Animations.js";
-import FrameIndexPattern from "../src/FrameIndexPattern.js";
-import GameLoop from "../src/GameLoop.js";
-import { gridCells } from "../src/gridCells.js";
-import Process from "../src/Process.js";
-import Resources from "../src/Resources.js";
-import Sprite from "../src/Sprites.js";
-import VectorTo from "../src/VectorTo.js";
+import Animations from "../Animations.js";
+import FrameIndexPattern from "../FrameIndexPattern.js";
+import GameLoop from "../GameLoop.js";
+import { gridCells } from "../gridCells.js";
+import Process from "../Process.js";
+import Resources from "../Resources.js";
+import Sprite from "../Sprites.js";
+import VectorTo from "../VectorTo.js";
 import { action } from "./action.js";
 import { drawEnemies, updateEnemies } from "./enemy.js";
 import {
@@ -33,24 +33,24 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const resources = {
   images: {
-    dino_right: "./sprites/olaf_right.png",
-    enemy_left: "./sprites/kira_left.png",
-    sky: "./sprites/sky.png",
-    grass: "./sprites/grass.png",
-    ground: "./sprites/ground.png",
-    bush: "./sprites/bush.png",
-    icons: "./sprites/GUI/IconButtons.png",
-    textButtons: "./sprites/GUI/TextButtons.png",
-    boxs: "./sprites/GUI/Boxs.png",
-    gameOverTitle: "./sprites/GUI/GameOver.png",
-    scoreText: "./sprites/GUI/Score.png",
-    highScoreText: "./sprites/GUI/High-score.png",
+    dino_right: "../assets/sprites/olaf_right.png",
+    enemy_left: "../assets/sprites/kira_left.png",
+    sky: "../assets/sprites/sky.png",
+    grass: "../assets/sprites/grass.png",
+    ground: "../assets/sprites/ground.png",
+    bush: "../assets/sprites/bush.png",
+    icons: "../assets/sprites/GUI/IconButtons.png",
+    textButtons: "../assets/sprites/GUI/TextButtons.png",
+    boxs: "../assets/sprites/GUI/Boxs.png",
+    gameOverTitle: "../assets/sprites/GUI/GameOver.png",
+    scoreText: "../assets/sprites/GUI/Score.png",
+    highScoreText: "../assets/sprites/GUI/High-score.png",
   },
 
   sounds: {
-    jump: "./sound-effect/jump.wav",
-    die: "./sound-effect/die.wav",
-    tap: "./sound-effect/tap.wav",
+    jump: "../assets/sound-effect/jump.wav",
+    die: "../assets/sound-effect/die.wav",
+    tap: "../assets/sound-effect/tap.wav",
   },
 };
 const resourceClass = new Resources(resources.images, resources.sounds);
