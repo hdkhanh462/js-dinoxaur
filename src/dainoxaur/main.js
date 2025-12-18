@@ -33,24 +33,24 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const resources = {
   images: {
-    dino_right: "../assets/sprites/olaf_right.png",
-    enemy_left: "../assets/sprites/kira_left.png",
-    sky: "../assets/sprites/sky.png",
-    grass: "../assets/sprites/grass.png",
-    ground: "../assets/sprites/ground.png",
-    bush: "../assets/sprites/bush.png",
-    icons: "../assets/sprites/GUI/IconButtons.png",
-    textButtons: "../assets/sprites/GUI/TextButtons.png",
-    boxs: "../assets/sprites/GUI/Boxs.png",
-    gameOverTitle: "../assets/sprites/GUI/GameOver.png",
-    scoreText: "../assets/sprites/GUI/Score.png",
-    highScoreText: "../assets/sprites/GUI/High-score.png",
+    dino_right: "assets/sprites/olaf_right.png",
+    enemy_left: "assets/sprites/kira_left.png",
+    sky: "assets/sprites/sky.png",
+    grass: "assets/sprites/grass.png",
+    ground: "assets/sprites/ground.png",
+    bush: "assets/sprites/bush.png",
+    icons: "assets/sprites/GUI/IconButtons.png",
+    textButtons: "assets/sprites/GUI/TextButtons.png",
+    boxs: "assets/sprites/GUI/Boxs.png",
+    gameOverTitle: "assets/sprites/GUI/GameOver.png",
+    scoreText: "assets/sprites/GUI/Score.png",
+    highScoreText: "assets/sprites/GUI/High-score.png",
   },
 
   sounds: {
-    jump: "../assets/sound-effect/jump.wav",
-    die: "../assets/sound-effect/die.wav",
-    tap: "../assets/sound-effect/tap.wav",
+    jump: "assets/sound-effect/jump.wav",
+    die: "assets/sound-effect/die.wav",
+    tap: "assets/sound-effect/tap.wav",
   },
 };
 const resourceClass = new Resources(resources.images, resources.sounds);
