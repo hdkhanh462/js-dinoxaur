@@ -1,4 +1,4 @@
-import Sprite from "../src/Sprites.js";
+import Sprite from "../Sprites.js";
 
 export default class ObjectConfig {
   constructor(canvasID, sprite = null) {
